@@ -184,10 +184,19 @@ a:focus-visible {
   border-color: var(--color-primary);
 }
 
+.button--wide {
+  width: 100%;
+}
+
 button:disabled,
 .button--disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.button:disabled:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .hero {
@@ -393,6 +402,164 @@ button:disabled,
   flex: 1;
   padding-right: var(--space-md);
   padding-left: var(--space-md);
+}
+
+.product-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin: 0 0 var(--space-md);
+  padding: 0;
+  list-style: none;
+}
+
+.product-card__meta-item {
+  padding: 2px var(--space-sm);
+  font-size: 13px;
+  background-color: var(--color-surface-alt);
+  border-radius: var(--radius-sm);
+}
+
+.product-card--unavailable .product-card__image {
+  filter: grayscale(1);
+  opacity: 0.7;
+}
+
+.product-card--unavailable .product-card__price {
+  color: var(--color-muted);
+}
+
+.stock {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.stock::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: currentColor;
+  border-radius: 50%;
+}
+
+.stock--available {
+  color: var(--color-success);
+}
+
+.stock--preorder {
+  color: var(--color-primary);
+}
+
+.stock--unavailable {
+  color: var(--color-muted);
+}
+
+.breadcrumbs {
+  margin-bottom: var(--space-lg);
+  font-size: 14px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: "/";
+  margin-left: var(--space-sm);
+  color: var(--color-muted);
+}
+
+.breadcrumbs__current {
+  color: var(--color-muted);
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  align-items: start;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.catalog__filters {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-lg));
+}
+
+.catalog:has(.filter__radio[value="filter"]:checked) .product-card:not([data-category="filter"]),
+.catalog:has(.filter__radio[value="espresso"]:checked) .product-card:not([data-category="espresso"]),
+.catalog:has(.filter__radio[value="gear"]:checked) .product-card:not([data-category="gear"]) {
+  display: none;
+}
+
+.filter {
+  padding: var(--space-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.filter__title {
+  font-size: 22px;
+}
+
+.filter__group {
+  margin: 0 0 var(--space-lg);
+  padding: 0;
+  border: 0;
+}
+
+.filter__legend {
+  margin-bottom: var(--space-sm);
+  padding: 0;
+  font-weight: 700;
+}
+
+.filter__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.filter__option:hover {
+  background-color: var(--color-surface-alt);
+}
+
+.filter__option:has(.filter__radio:checked) {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  background-color: var(--color-surface-alt);
+}
+
+.filter__radio,
+.filter__checkbox {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--color-primary);
+}
+
+.filter__radio:focus-visible,
+.filter__checkbox:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.filter__note {
+  margin: var(--space-sm) 0 0;
+  font-size: 13px;
+  color: var(--color-muted);
 }
 
 .badge {

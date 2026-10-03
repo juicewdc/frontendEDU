@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог магазина Зерно: кофе под фильтр и эспрессо, воронки и кофемолки.">
+  <title>Каталог кофе и аксессуаров — Зерно</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__logo" href="index.html">Зерно</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+            <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Каталог</span></li>
+          </ol>
+        </nav>
+
+        <h1 class="page-title">Каталог</h1>
+        <p class="section__lead">Шесть позиций: зерно под фильтр и эспрессо, а также аксессуары для заваривания.</p>
+
+        <div class="catalog">
+          <aside class="catalog__filters filter" id="filters" aria-label="Фильтры каталога">
+            <h2 class="filter__title">Фильтры</h2>
+
+            <form class="filter__form" action="#" method="get">
+              <fieldset class="filter__group">
+                <legend class="filter__legend">Категория</legend>
+                <label class="filter__option">
+                  <input class="filter__radio" type="radio" name="category" value="all" checked>
+                  Все товары
+                </label>
+                <label class="filter__option">
+                  <input class="filter__radio" type="radio" name="category" value="filter">
+                  Кофе под фильтр
+                </label>
+                <label class="filter__option">
+                  <input class="filter__radio" type="radio" name="category" value="espresso">
+                  Кофе под эспрессо
+                </label>
+                <label class="filter__option">
+                  <input class="filter__radio" type="radio" name="category" value="gear">
+                  Аксессуары
+                </label>
+              </fieldset>
+
+              <fieldset class="filter__group">
+                <legend class="filter__legend">Обжарка</legend>
+                <label class="filter__option">
+                  <input class="filter__checkbox" type="checkbox" name="roast" value="light">
+                  Светлая
+                </label>
+                <label class="filter__option">
+                  <input class="filter__checkbox" type="checkbox" name="roast" value="medium">
+                  Средняя
+                </label>
+                <label class="filter__option">
+                  <input class="filter__checkbox" type="checkbox" name="roast" value="dark">
+                  Тёмная
+                </label>
+              </fieldset>
+
+              <button class="button button--wide" type="submit" disabled>Применить</button>
+              <p class="filter__note">Категории переключаются средствами CSS. Фильтр по обжарке заработает после добавления JavaScript.</p>
+            </form>
+          </aside>
+
+          <section class="catalog__content" aria-label="Список товаров">
+            <div class="product-grid">
+              <article class="product-card" data-category="filter">
+                <span class="badge badge--hit product-card__badge">Хит</span>
+                <img class="product-card__image" src="images/ethiopia.svg" alt="Пачка кофе Эфиопия Иргачеффе" width="400" height="300">
+                <div class="product-card__body">
+                  <p class="product-card__category">Под фильтр</p>
+                  <h2 class="product-card__title">Эфиопия Иргачеффе</h2>
+                  <p class="product-card__text">Светлая обжарка с нотами жасмина, бергамота и персика.</p>
+                  <ul class="product-card__meta">
+                    <li class="product-card__meta-item">250 г</li>
+                    <li class="product-card__meta-item">Светлая обжарка</li>
+                  </ul>
+                  <p class="product-card__price">890&nbsp;₽</p>
+                  <p class="stock stock--available">В наличии</p>
+                  <div class="product-card__actions">
+                    <a class="button button--secondary product-card__button" href="product.html">Подробнее</a>
+                    <a class="button product-card__button" href="order.html">Заказать</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card" data-category="filter">
+                <span class="badge badge--new product-card__badge">Новинка</span>
+                <img class="product-card__image" src="images/colombia.svg" alt="Пачка кофе Колумбия Уила" width="400" height="300">
+                <div class="product-card__body">
+                  <p class="product-card__category">Под фильтр</p>
+                  <h2 class="product-card__title">Колумбия Уила</h2>
+                  <p class="product-card__text">Средняя обжарка: красное яблоко, карамель и молочный шоколад.</p>
+                  <ul class="product-card__meta">
+                    <li class="product-card__meta-item">250 г</li>
+                    <li class="product-card__meta-item">Средняя обжарка</li>
+                  </ul>
+                  <p class="product-card__price">790&nbsp;₽</p>
+                  <p class="stock stock--available">В наличии</p>
+                  <div class="product-card__actions">
+                    <a class="button button--secondary product-card__button" href="product-colombia.html">Подробнее</a>
+                    <a class="button product-card__button" href="order.html">Заказать</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card product-card--discount" data-category="espresso">
+                <span class="badge badge--sale product-card__badge">Скидка</span>
+                <img class="product-card__image" src="images/brazil.svg" alt="Пачка кофе Бразилия Серрадо" width="400" height="300">
+                <div class="product-card__body">
+                  <p class="product-card__category">Под эспрессо</p>
+                  <h2 class="product-card__title">Бразилия Серрадо</h2>
+                  <p class="product-card__text">Плотный эспрессо с орехом, какао и низкой кислотностью.</p>
+                  <ul class="product-card__meta">
+                    <li class="product-card__meta-item">250 г</li>
+                    <li class="product-card__meta-item">Тёмная обжарка</li>
+                  </ul>
+                  <p class="product-card__price">650&nbsp;₽ <s class="product-card__old-price">760&nbsp;₽</s></p>
+                  <p class="stock stock--available">В наличии</p>
+                  <div class="product-card__actions">
+                    <a class="button button--secondary product-card__button" href="product-brazil.html">Подробнее</a>
+                    <a class="button product-card__button" href="order.html">Заказать</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card product-card--unavailable" data-category="filter">
+                <img class="product-card__image" src="images/kenya.svg" alt="Пачка кофе Кения АА" width="400" height="300">
+                <div class="product-card__body">
+                  <p class="product-card__category">Под фильтр</p>
+                  <h2 class="product-card__title">Кения АА</h2>
+                  <p class="product-card__text">Яркая чашка с чёрной смородиной, грейпфрутом и томатной сладостью.</p>
+                  <ul class="product-card__meta">
+                    <li class="product-card__meta-item">250 г</li>
+                    <li class="product-card__meta-item">Светлая обжарка</li>
+                  </ul>
+                  <p class="product-card__price">990&nbsp;₽</p>
+                  <p class="stock stock--unavailable">Нет в наличии</p>
+                  <div class="product-card__actions">
+                    <a class="button button--secondary product-card__button" href="product-kenya.html">Подробнее</a>
+                    <button class="button product-card__button" type="button" disabled>Заказать</button>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card" data-category="gear">
+                <img class="product-card__image" src="images/dripper.svg" alt="Керамическая воронка для пуровера" width="400" height="300">
+                <div class="product-card__body">
+                  <p class="product-card__category">Аксессуары</p>
+                  <h2 class="product-card__title">Воронка V60 керамическая</h2>
+                  <p class="product-card__text">Классическая воронка для пуровера на одну-две чашки.</p>
+                  <ul class="product-card__meta">
+                    <li class="product-card__meta-item">Керамика</li>
+                    <li class="product-card__meta-item">1–2 чашки</li>
+                  </ul>
+                  <p class="product-card__price">1&nbsp;490&nbsp;₽</p>
+                  <p class="stock stock--available">В наличии</p>
+                  <div class="product-card__actions">
+                    <a class="button button--secondary product-card__button" href="product-dripper.html">Подробнее</a>
+                    <a class="button product-card__button" href="order.html">Заказать</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card" data-category="gear">
+                <span class="badge badge--new product-card__badge">Новинка</span>
+                <img class="product-card__image" src="images/grinder.svg" alt="Ручная кофемолка Mill S" width="400" height="300">
+                <div class="product-card__body">
+                  <p class="product-card__category">Аксессуары</p>
+                  <h2 class="product-card__title">Ручная кофемолка Mill S</h2>
+                  <p class="product-card__text">Стальные конические жернова и 30 ступеней настройки помола.</p>
+                  <ul class="product-card__meta">
+                    <li class="product-card__meta-item">Сталь</li>
+                    <li class="product-card__meta-item">25 г зерна</li>
+                  </ul>
+                  <p class="product-card__price">3&nbsp;990&nbsp;₽</p>
+                  <p class="stock stock--preorder">Под заказ, 5 дней</p>
+                  <div class="product-card__actions">
+                    <a class="button button--secondary product-card__button" href="product-grinder.html">Подробнее</a>
+                    <a class="button product-card__button" href="order.html">Заказать</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__text">&copy; 2026 Зерно. Учебный проект.</p>
+      <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+    </div>
+  </footer>
+</body>
+</html>
