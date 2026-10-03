@@ -832,6 +832,87 @@ button:disabled,
   gap: var(--space-md);
 }
 
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.contacts__info {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.contacts__list {
+  display: grid;
+  gap: var(--space-md);
+  margin: 0;
+}
+
+.contacts__term {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+}
+
+.contacts__value {
+  margin: 0;
+  font-size: 18px;
+}
+
+.contacts__address {
+  font-style: normal;
+}
+
+.contacts__note {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule__caption {
+  padding-bottom: var(--space-sm);
+  font-size: 14px;
+  text-align: left;
+  color: var(--color-muted);
+}
+
+.schedule__head,
+.schedule__day,
+.schedule__time {
+  padding: var(--space-sm) 0;
+  text-align: left;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.schedule__head {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+}
+
+.schedule__day {
+  font-weight: 400;
+}
+
+.schedule__head--time,
+.schedule__time {
+  text-align: right;
+}
+
+.schedule__time {
+  font-weight: 600;
+}
+
 .order-layout {
   display: grid;
   grid-template-columns: 1fr 340px;
