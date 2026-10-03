@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оформление заявки в магазине Зерно: выберите товар, помол и способ доставки.">
+  <title>Оформление заявки — Зерно</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__logo" href="index.html">Зерно</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html" aria-current="page">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+            <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Заявка</span></li>
+          </ol>
+        </nav>
+
+        <h1 class="page-title">Оформление заявки</h1>
+        <p class="section__lead">Заполните форму, и мы свяжемся с вами, чтобы подтвердить заказ. Поля со звёздочкой обязательны.</p>
+
+        <div class="order-layout">
+          <form class="form form--panel" action="#" method="post">
+            <fieldset class="form__group">
+              <legend class="form__legend">Контактные данные</legend>
+
+              <div class="form__field">
+                <label class="form__label" for="order-name">Имя <span class="form__required" aria-hidden="true">*</span></label>
+                <input class="form__input" id="order-name" name="name" type="text" placeholder="Как к вам обращаться" minlength="2" autocomplete="given-name" required>
+              </div>
+
+              <div class="form__row">
+                <div class="form__field">
+                  <label class="form__label" for="order-email">E-mail <span class="form__required" aria-hidden="true">*</span></label>
+                  <input class="form__input" id="order-email" name="email" type="email" placeholder="name@example.ru" autocomplete="email" required>
+                </div>
+
+                <div class="form__field">
+                  <label class="form__label" for="order-phone">Телефон <span class="form__required" aria-hidden="true">*</span></label>
+                  <input class="form__input" id="order-phone" name="phone" type="tel" placeholder="+7 900 000-00-00" autocomplete="tel" aria-describedby="order-phone-hint" required>
+                  <span class="form__hint" id="order-phone-hint">Позвоним только для подтверждения заказа</span>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form__group">
+              <legend class="form__legend">Заказ</legend>
+
+              <div class="form__field">
+                <label class="form__label" for="order-product">Товар <span class="form__required" aria-hidden="true">*</span></label>
+                <select class="form__select" id="order-product" name="product" required>
+                  <option value="">Выберите товар</option>
+                  <optgroup label="Кофе под фильтр">
+                    <option value="ethiopia">Эфиопия Иргачеффе — 890 ₽</option>
+                    <option value="colombia">Колумбия Уила — 790 ₽</option>
+                  </optgroup>
+                  <optgroup label="Кофе под эспрессо">
+                    <option value="brazil">Бразилия Серрадо — 650 ₽</option>
+                  </optgroup>
+                  <optgroup label="Аксессуары">
+                    <option value="dripper">Воронка V60 керамическая — 1 490 ₽</option>
+                    <option value="grinder">Ручная кофемолка Mill S — 3 990 ₽</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form__row">
+                <div class="form__field">
+                  <label class="form__label" for="order-quantity">Количество</label>
+                  <input class="form__input" id="order-quantity" name="quantity" type="number" min="1" max="20" value="1">
+                </div>
+
+                <div class="form__field">
+                  <label class="form__label" for="order-grind">Помол</label>
+                  <select class="form__select" id="order-grind" name="grind">
+                    <option value="beans">В зёрнах</option>
+                    <option value="filter">Под фильтр</option>
+                    <option value="espresso">Под эспрессо</option>
+                    <option value="cezve">Под турку</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form__group">
+              <legend class="form__legend">Доставка</legend>
+
+              <div class="form__options">
+                <label class="form__check">
+                  <input class="form__radio" type="radio" name="delivery" value="courier" checked>
+                  Курьером по Москве
+                </label>
+                <label class="form__check">
+                  <input class="form__radio" type="radio" name="delivery" value="pickup-point">
+                  В пункт выдачи
+                </label>
+                <label class="form__check">
+                  <input class="form__radio" type="radio" name="delivery" value="pickup">
+                  Самовывоз
+                </label>
+              </div>
+
+              <div class="form__field">
+                <label class="form__label" for="order-comment">Комментарий</label>
+                <textarea class="form__textarea" id="order-comment" name="comment" rows="4" placeholder="Адрес, удобное время, пожелания к заказу"></textarea>
+              </div>
+            </fieldset>
+
+            <label class="form__check" for="order-agreement">
+              <input class="form__checkbox" id="order-agreement" name="agreement" type="checkbox" required>
+              <span>Я согласен на обработку персональных данных <span class="form__required" aria-hidden="true">*</span></span>
+            </label>
+
+            <div class="form__actions">
+              <button class="button" type="submit">Отправить заявку</button>
+              <button class="button button--secondary" type="reset">Очистить</button>
+            </div>
+          </form>
+
+          <aside class="order-layout__aside">
+            <div class="info-card info-card--accent">
+              <h2 class="info-card__title">Что будет дальше</h2>
+              <ol class="info-card__list">
+                <li class="info-card__item">Мы получим заявку и проверим наличие.</li>
+                <li class="info-card__item">Позвоним или напишем в течение часа.</li>
+                <li class="info-card__item">Обжарим, упакуем и передадим в доставку.</li>
+              </ol>
+            </div>
+
+            <div class="info-card">
+              <h2 class="info-card__title">Нужна помощь?</h2>
+              <p class="info-card__text">Не знаете, какой сорт выбрать? Напишите нам, подскажем под ваш способ заваривания.</p>
+              <a class="button button--secondary button--wide" href="contacts.html">Написать нам</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__text">&copy; 2026 Зерно. Учебный проект.</p>
+      <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+    </div>
+  </footer>
+</body>
+</html>
