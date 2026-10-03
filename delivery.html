@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Условия доставки и оплаты в магазине Зерно, порядок оформления заказа и ответы на частые вопросы.">
+  <title>Доставка и оплата — Зерно</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__logo" href="index.html">Зерно</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="delivery.html" aria-current="page">Доставка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          <ol class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+            <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Доставка</span></li>
+          </ol>
+        </nav>
+
+        <h1 class="page-title">Доставка и оплата</h1>
+        <p class="section__lead">Отправляем заказы каждый будний день. Ниже — способы доставки, порядок заказа и <a href="#faq">ответы на частые вопросы</a>.</p>
+
+        <table class="data-table data-table--spaced">
+          <caption class="data-table__caption">Способы доставки</caption>
+          <thead>
+            <tr>
+              <th class="data-table__head" scope="col">Способ</th>
+              <th class="data-table__head" scope="col">Срок</th>
+              <th class="data-table__head" scope="col">Стоимость</th>
+              <th class="data-table__head" scope="col">Бесплатно при заказе</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="data-table__row">
+              <th class="data-table__row-head" scope="row">Курьером по Москве</th>
+              <td class="data-table__cell">На следующий день</td>
+              <td class="data-table__cell">350 ₽</td>
+              <td class="data-table__cell">от 3 000 ₽</td>
+            </tr>
+            <tr class="data-table__row">
+              <th class="data-table__row-head" scope="row">Пункт выдачи</th>
+              <td class="data-table__cell">2–5 дней</td>
+              <td class="data-table__cell">250 ₽</td>
+              <td class="data-table__cell">от 2 500 ₽</td>
+            </tr>
+            <tr class="data-table__row">
+              <th class="data-table__row-head" scope="row">Почта России</th>
+              <td class="data-table__cell">5–10 дней</td>
+              <td class="data-table__cell">300 ₽</td>
+              <td class="data-table__cell">от 4 000 ₽</td>
+            </tr>
+            <tr class="data-table__row">
+              <th class="data-table__row-head" scope="row">Самовывоз из цеха</th>
+              <td class="data-table__cell">В день заказа</td>
+              <td class="data-table__cell">Бесплатно</td>
+              <td class="data-table__cell">Всегда</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="steps">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Как проходит заказ</h2>
+        </div>
+        <ol class="steps">
+          <li class="steps__item">
+            <h3 class="steps__title">Заявка</h3>
+            <p class="steps__text">Вы оставляете заявку на сайте, мы подтверждаем её по телефону.</p>
+          </li>
+          <li class="steps__item">
+            <h3 class="steps__title">Обжарка и упаковка</h3>
+            <p class="steps__text">Собираем заказ из свежей партии и при необходимости мелем зерно.</p>
+          </li>
+          <li class="steps__item">
+            <h3 class="steps__title">Доставка и оплата</h3>
+            <p class="steps__text">Передаём заказ в доставку. Оплата картой или наличными при получении.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Частые вопросы</h2>
+        </div>
+        <div class="faq">
+          <details class="faq__item" open>
+            <summary class="faq__question">Как долго кофе остаётся свежим?</summary>
+            <p class="faq__answer">Лучший вкус — в первые шесть недель после обжарки. Храните зерно в закрытой пачке, в сухом тёмном месте.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Можно ли заказать молотый кофе?</summary>
+            <p class="faq__answer">Да. В форме заявки выберите помол: под фильтр, эспрессо или турку. Мелем в день отправки.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Как оплатить заказ?</summary>
+            <p class="faq__answer">Оплата при получении: картой или наличными курьеру либо в пункте выдачи.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Что делать, если кофе не понравился?</summary>
+            <p class="faq__answer">Напишите нам через форму обратной связи — подберём другой сорт и сделаем скидку на следующий заказ.</p>
+          </details>
+        </div>
+
+        <aside class="promo promo--spaced">
+          <div class="promo__content">
+            <h2 class="promo__title">Остались вопросы?</h2>
+            <p class="promo__text">Напишите нам — ответим в течение рабочего дня.</p>
+          </div>
+          <a class="button promo__button" href="contacts.html#feedback">Задать вопрос</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__column">
+          <p class="site-footer__logo">Зерно</p>
+          <p class="site-footer__text">Свежеобжаренный кофе и аксессуары для заваривания. Учебный проект по дисциплине «Фронтенд и бэкенд разработка».</p>
+        </div>
+
+        <nav class="site-footer__column" aria-label="Разделы сайта">
+          <h2 class="site-footer__title">Разделы</h2>
+          <ul class="site-footer__list">
+            <li class="site-footer__item"><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+            <li class="site-footer__item"><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+            <li class="site-footer__item"><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
+            <li class="site-footer__item"><a class="site-footer__link" href="catalog.html#filters">Фильтры каталога</a></li>
+            <li class="site-footer__item"><a class="site-footer__link" href="delivery.html#faq">Частые вопросы</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__title">Контакты</h2>
+          <ul class="site-footer__list">
+            <li class="site-footer__item">Москва, ул. Примерная, д. 12, стр. 3</li>
+            <li class="site-footer__item"><a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+            <li class="site-footer__item"><a class="site-footer__link" href="contacts.html#feedback">Обратная связь</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="site-footer__copy">&copy; 2026 Зерно. Учебный проект.</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">&uarr;</a>
+</body>
+</html>

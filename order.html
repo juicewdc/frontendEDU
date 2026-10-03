@@ -6,8 +6,9 @@
   <meta name="description" content="Оформление заявки в магазине Зерно: выберите товар, помол и способ доставки.">
   <title>Оформление заявки — Зерно</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="site-header__logo" href="index.html">Зерно</a>
@@ -16,6 +17,7 @@
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка</a></li>
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html" aria-current="page">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
         </ul>
@@ -156,10 +158,40 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <p class="site-footer__text">&copy; 2026 Зерно. Учебный проект.</p>
-      <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="site-footer__column">
+          <p class="site-footer__logo">Зерно</p>
+          <p class="site-footer__text">Свежеобжаренный кофе и аксессуары для заваривания. Учебный проект по дисциплине «Фронтенд и бэкенд разработка».</p>
+        </div>
+
+        <nav class="site-footer__column" aria-label="Разделы сайта">
+          <h2 class="site-footer__title">Разделы</h2>
+          <ul class="site-footer__list">
+            <li class="site-footer__item"><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+            <li class="site-footer__item"><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+            <li class="site-footer__item"><a class="site-footer__link" href="index.html#reviews">Отзывы</a></li>
+            <li class="site-footer__item"><a class="site-footer__link" href="catalog.html#filters">Фильтры каталога</a></li>
+            <li class="site-footer__item"><a class="site-footer__link" href="delivery.html#faq">Частые вопросы</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-footer__column">
+          <h2 class="site-footer__title">Контакты</h2>
+          <ul class="site-footer__list">
+            <li class="site-footer__item">Москва, ул. Примерная, д. 12, стр. 3</li>
+            <li class="site-footer__item"><a class="site-footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+            <li class="site-footer__item"><a class="site-footer__link" href="contacts.html#feedback">Обратная связь</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="site-footer__copy">&copy; 2026 Зерно. Учебный проект.</p>
     </div>
   </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">&uarr;</a>
+
+  <p class="notice" role="status" hidden>Спасибо! Заявка отправлена, мы свяжемся с вами.</p>
 </body>
 </html>
